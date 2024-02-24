@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".CheckBoxActivity"
+            android:exported="false" />
+        <activity
             android:name=".RadioBtnActivity"
             android:exported="false" />
         <activity

@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button activityButton;
     private Button radioButton;
 
+    private Button checkedButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnButton = findViewById(R.id.btn_button);
         activityButton = findViewById(R.id.btn_editext);
         radioButton = findViewById(R.id.btn_radiobtn);
+        checkedButton = findViewById(R.id.btn_checkbox);
         setListeners();
     }
     private void setListeners(){
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnButton.setOnClickListener(onclick);
         activityButton.setOnClickListener(onclick);
         radioButton.setOnClickListener(onclick);
+        checkedButton.setOnClickListener(onclick);
     }
     private class OnClick implements View.OnClickListener{
         private final Map<Integer, Class<? extends Activity>> activityMap = new HashMap<>();
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             activityMap.put(R.id.btn_textview, TextViewActivity.class);
             activityMap.put(R.id.btn_button, ButtonActivity.class);
             activityMap.put(R.id.btn_radiobtn, RadioBtnActivity.class);
+            activityMap.put(R.id.btn_checkbox, CheckBoxActivity.class);
         }
 
         @Override
