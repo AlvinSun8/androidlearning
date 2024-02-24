@@ -33,7 +33,7 @@
         android:layout_height="40dp"
         android:layout_below="@+id/edit_two"
         android:layout_marginTop="40dp"
-        android:background="@drawable/touch_btn"
+        android:background="@drawable/selector_orange"
         android:text="登录"
         />
 </RelativeLayout>
