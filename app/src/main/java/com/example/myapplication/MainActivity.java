@@ -10,7 +10,10 @@ import android.os.Build;
 import android.widget.Button;
 import android.widget.RadioButton;
 
+import com.example.myapplication.listview.ListViewActivity;
+
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private Button radioButton;
     private Button checkedButton;
     private Button ImageViewButton;
+    private Button ListViewButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         radioButton = findViewById(R.id.btn_radiobtn);
         checkedButton = findViewById(R.id.btn_checkbox);
         ImageViewButton = findViewById(R.id.btn_imageview);
+        ListViewButton = findViewById(R.id.btn_listview);
         setListeners();
     }
     private void setListeners(){
@@ -41,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         radioButton.setOnClickListener(onclick);
         checkedButton.setOnClickListener(onclick);
         ImageViewButton.setOnClickListener(onclick);
+        ListViewButton.setOnClickListener(onclick);
     }
     private class OnClick implements View.OnClickListener{
         private final Map<Integer, Class<? extends Activity>> activityMap = new HashMap<>();
@@ -52,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             activityMap.put(R.id.btn_radiobtn, RadioBtnActivity.class);
             activityMap.put(R.id.btn_checkbox, CheckBoxActivity.class);
             activityMap.put(R.id.btn_imageview, ImageViewActivity.class);
+            activityMap.put(R.id.btn_listview, ListViewActivity.class);
         }
 
         @Override
